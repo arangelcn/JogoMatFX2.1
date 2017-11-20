@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="913.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controles.FXMLInfoJogadorController">
+   <children>
+      <Pane layoutY="-4.0" prefHeight="587.0" prefWidth="340.0" style="-fx-background-color: Blue;">
+         <children>
+            <Label layoutX="101.0" layoutY="41.0" style="-: ;" text="Bem-Vindo" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNome" alignment="CENTER" layoutX="104.0" layoutY="134.0" prefHeight="21.0" prefWidth="214.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnLogout" buttonType="RAISED" focusTraversable="false" layoutX="31.0" layoutY="371.0" onAction="#btnLogoutClicado" pickOnBounds="false" prefHeight="26.0" prefWidth="271.0" style="-fx-background-color: white;" text="Logout" />
+            <JFXProgressBar fx:id="progress" layoutX="-7.0" layoutY="332.0" prefHeight="13.0" prefWidth="325.0" progress="0.0" style="-fx-background-color: white;" />
+            <JFXComboBox fx:id="checkBokOpcoes" focusColor="WHITE" layoutX="31.0" layoutY="478.0" prefHeight="26.0" prefWidth="271.0" style="-fx-background-color: white;" unFocusColor="WHITE" />
+            <JFXButton fx:id="btnCarregaDesempenho" buttonType="RAISED" focusTraversable="false" layoutX="31.0" layoutY="527.0" onAction="#btnCarregaDesempenhoClicado" pickOnBounds="false" prefHeight="30.0" prefWidth="271.0" style="-fx-background-color: white;" text="Escolher Jogo" />
+            <Label fx:id="lblNome1" layoutX="38.0" layoutY="443.0" prefHeight="21.0" prefWidth="207.0" text="Tipo:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNivel" alignment="CENTER" layoutX="133.0" layoutY="208.0" prefHeight="21.0" prefWidth="157.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNome11" layoutX="36.0" layoutY="296.0" prefHeight="21.0" prefWidth="207.0" text="Porcentagem jogo atual:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="34.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/profile.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgMedalha" fitHeight="52.0" fitWidth="51.0" layoutX="29.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/medalha-bronze.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="32.0" layoutY="162.0" prefHeight="3.0" prefWidth="271.0" />
+            <Separator layoutX="32.0" layoutY="236.0" prefHeight="3.0" prefWidth="271.0" />
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnIniciarNovoJogo" buttonType="RAISED" focusTraversable="false" layoutX="665.0" layoutY="519.0" onAction="#btnIniciaNovoJogo" pickOnBounds="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: white;" text="Novo Jogo" />
+      <PieChart fx:id="graficoDesempenho" layoutX="434.0" layoutY="59.0" prefHeight="318.0" prefWidth="421.0" />
+      <BarChart fx:id="barChart" layoutX="376.0" layoutY="55.0" prefHeight="361.0" prefWidth="507.0">
+        <xAxis>
+          <CategoryAxis fx:id="categorias" prefHeight="32.0" prefWidth="372.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="numerosGrafico" label="Desempenho" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <JFXButton fx:id="btnSalvaDados" buttonType="RAISED" focusTraversable="false" layoutX="413.0" layoutY="519.0" onAction="#btnSalvarDados" pickOnBounds="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: white;" text="Salvar Dados" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="jogoMatematicaFX2_1.jnlp">
+  <information>
+    <title>jogoMatematicaFX2_1</title>
+    <vendor>arcn</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  <shortcut><desktop/></shortcut>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="jogoMatematicaFX2_1.jar" size="312815" download="eager" />
+    <jar href="lib/jfoenix.jar" size="2390900" download="eager" />
+    <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="843090" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="jogoMatematicaFX2_1" >
+    <param name="requiredFXVersion" value="2.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="jogomatematicafx.JogoMatematicaFX"  name="jogoMatematicaFX2_1" />
+  <update check="always"/>
+</jnlp>

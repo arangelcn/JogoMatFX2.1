@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="557.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controles.FXMLCadastroController">
+   <children>
+      <JFXTextField fx:id="txtNome" layoutX="45.0" layoutY="97.0" prefHeight="24.0" prefWidth="316.0" />
+      <JFXTextField fx:id="txtUsr" layoutX="45.0" layoutY="161.0" prefHeight="24.0" prefWidth="316.0" />
+      <Label layoutX="45.0" layoutY="128.0" text="Nome" />
+      <Label layoutX="45.0" layoutY="194.0" text="Usuario" />
+      <Label layoutX="46.0" layoutY="253.0" text="Senha" />
+      <Label layoutX="45.0" layoutY="317.0" text="Repita a senha" />
+      <JFXPasswordField fx:id="txtSenha" layoutX="45.0" layoutY="222.0" prefHeight="24.0" prefWidth="316.0">
+         <font>
+            <Font size="10.0" />
+         </font></JFXPasswordField>
+      <JFXPasswordField fx:id="txtConfereSenha" layoutX="45.0" layoutY="284.0" prefHeight="24.0" prefWidth="316.0">
+         <font>
+            <Font size="10.0" />
+         </font></JFXPasswordField>
+      <JFXButton fx:id="btnEnviaCadastro" buttonType="RAISED" layoutX="151.0" layoutY="491.0" onAction="#EnviaCadastroClicado" pickOnBounds="false" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: white;" text="Enviar">
+         <font>
+            <Font size="15.0" />
+         </font></JFXButton>
+      <Label fx:id="lblConfirmaCadastro" alignment="CENTER" contentDisplay="CENTER" layoutY="422.0" prefHeight="29.0" prefWidth="408.0" style="-fx-background-color: white;" textAlignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <JFXButton fx:id="btnVoltar" buttonType="RAISED" onAction="#btnVoltarClicado" prefHeight="40.0" prefWidth="408.0" style="-fx-background-color: blue;" text="Voltar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
